@@ -75,10 +75,14 @@ custom:
     domain: localhost
     backUrl: "http://${custom.dev.domain}:${server.port}"
     frontUrl: "http://${custom.dev.domain}:3000"
+  prod:
+    domain: app4.kozae.shop
+    backUrl: "https://api.${custom.prod.domain}"
+    frontUrl: "https://www.${custom.prod.domain}"
   site:
     backUrl: "${custom.dev.backUrl}"
     frontUrl: "${custom.dev.frontUrl}"
   jwt:
     expire-seconds: "#{5}"
   genFile:
-    dirPath: c:/temp/glog_dev
+    dirPath: gen
